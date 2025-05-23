@@ -1,0 +1,185 @@
+
+  /*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active{
+    background-color: #22874b !important;
+    color: white !important;
+    font-weight: bold;
+
+   
+  }
+
+
+
+
+
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+.login__box {
+ 
+  display: flex;
+  align-items: center;
+  
+  border-radius: 1rem;
+}
+
+.login__input {
+  background: none;
+  width: 100%;
+  padding: 1.5rem 2.5rem 1.5rem 1.25rem;
+  font-weight: var(--font-semi-bold);
+  border: 3px solid transparent;
+  border-radius: 1rem;
+  z-index: 1;
+  transition: border-color .4s;
+}
+
+.login__input:autofill {
+  transition: background-color 6000s, color 6000s;
+}
+
+.login__label {
+  position: absolute;
+  left: rem;
+  font-weight: var(--font-semi-bold);
+  transition: transform .4s, font-size .4s, color .4s;
+}
+
+
+.register__label {
+  position: absolute;
+
+  font-weight: var(--font-semi-bold);
+  transition: transform .4s, font-size .4s, color .4s;
+}
+
+
+.login__button {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  background-color: #22874b;
+  color: white;
+  font-weight: var(--font-semi-bold);
+  padding-block: 1.5rem;
+  border-radius: 4rem;
+  margin-block: 2rem;
+  cursor: pointer;
+  transition: background-color .4s, box-shadow .4s;
+  font-weight: 500;
+}
+
+.login__button:hover {
+  background-color: #3e8494;
+  box-shadow: 0 8px 24px hsla(208, 92%, 32%, .3);
+}
+
+
+
+
+
+
+/* Input focus move up label */
+.login__input:focus ~ .login__label {
+  transform: translateY(-12px);
+  font-size: var(--tiny-font-size);
+}
+.login__input:focus ~ .register__label {
+  transform: translateY(-12px);
+  font-size: var(--tiny-font-size);
+}
+
+.login__input:focus {
+  padding-block: 2rem 1rem;
+}
+
+/* Input focus sticky top label */
+.login__input:not(:placeholder-shown).login__input:not(:focus) ~ .login__label {
+  transform: translateY(-12px);
+  font-size: var(--tiny-font-size);
+}
+.login__input:not(:placeholder-shown).login__input:not(:focus) ~ .register__label {
+  transform: translateY(-12px);
+  font-size: var(--tiny-font-size);
+}
+
+.login__input:not(:placeholder-shown).login__input:not(:focus) {
+  padding-block: 2rem 1rem;
+}
+
+/* Input focus color */
+.login__input:focus {
+  border-color: #47bbd4;
+}
+
+.login__input:focus ~ .login__label,
+.login__input:focus ~ .login__icon {
+  color: black;
+}
+.login__input:focus ~ .register__label,
+.login__input:focus ~ .login__icon {
+  color: black;
+}
+
+
+
+
+ /* select option:hover {
+    background-color: #22874b !important;
+    color: white !important;
+  } */
+
+
+
+  /* Add to your CSS file */
+.loading-spinner {
+  --spinner-size: 3rem;
+  --spinner-color: theme('colors.blue.500');
+  --spinner-speed: 0.8s;
+}
+
+.loading-skeleton {
+  --skeleton-bg: theme('colors.gray.200');
+  --skeleton-animation: pulse 1.5s infinite;
+}
