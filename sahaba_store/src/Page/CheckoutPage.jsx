@@ -25,7 +25,7 @@ const CheckoutPage = () => {
   // Fetch coupons from API
   const fetchCoupons = async () => {
     try {
-      const response = await fetch('http://91.108.105.196:5000/coupons');
+      const response = await fetch('https://api.sahaba-store.shop/coupons');
       const data = await response.json();
       setCoupons(data);
     } catch (error) {

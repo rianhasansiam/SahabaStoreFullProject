@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://91.108.105.196:5000',
+  baseURL: 'https://api.sahaba-store.shop',
   timeout: 10000, // 10 seconds timeout
   headers: {
     'Content-Type': 'application/json',
