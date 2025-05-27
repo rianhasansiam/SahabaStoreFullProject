@@ -507,7 +507,7 @@ const CheckoutPage = () => {
                   {/* Coupon Code Section */}
                   {!appliedCoupon ? (
                     <div className="py-3">
-                      <label htmlFor="coupon" className="block text-sm font-medium text-gray-700 mb-1">
+                      <label htmlFor="coupon" className="block text-sm font-medium text-gray-700  mb-1">
                         Have a coupon?
                       </label>
                       <div className="flex">
@@ -517,7 +517,7 @@ const CheckoutPage = () => {
                           value={couponCode}
                           onChange={(e) => setCouponCode(e.target.value)}
                           placeholder="Enter coupon code"
-                          className="flex-1 border border-gray-300 rounded-l-md px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#22874b]"
+                          className="flex-1 border border-gray-300 rounded-l-md bg-gray-100 px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#22874b]"
                         />
                         <button
                           onClick={applyCoupon}

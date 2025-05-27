@@ -172,12 +172,12 @@ const HomepageCard = ({ product }) => {
           {product?.shortDescription}
         </p>
         
-        {/* Price and actions */}        <div className="mt-auto">
+        {/* Price and actions */}        <div className="mt-auto ">
           <div className="flex items-center justify-between mb-2">
-            <span className="font-bold text-base text-gray-800">
+            <span className="font-bold text-base text-gray-800 ">
               {product.priceVariants && product.priceVariants.length > 0 
-                ? `${product.priceVariants[0].price} BDT` 
-                : `${product.price} BDT`}
+                ? `${product.price} ` 
+                : `${product.price} `}
             </span>
             {product.originalPrice && (
               <span className="text-xs text-gray-400 line-through">
