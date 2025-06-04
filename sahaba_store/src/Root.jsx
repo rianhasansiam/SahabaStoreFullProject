@@ -23,6 +23,7 @@ import CheckoutPage from "./Page/CheckoutPage";
 import OrderConfirmation from "./Page/OrderConfirmation";
 import ProductDetails from "./Page/ProductDetails";
 import ErrorPage from "./Conponents/ErrorPage";
+import ProductDetailsNew from "./Conponents/ProductDetailsNew";
 
 
 
@@ -81,6 +82,7 @@ const Root = createBrowserRouter([
         path: '/product-details/:id',
         element: <ProductDetails></ProductDetails>
       },
+      
 
 
 
@@ -102,6 +104,10 @@ const Root = createBrowserRouter([
 
     ]
   },
+  {
+        path: '/product-details-new/:id',
+        element: <ProductDetailsNew></ProductDetailsNew>
+      },
 
   
 ]);
