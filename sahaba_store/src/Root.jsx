@@ -105,7 +105,7 @@ const Root = createBrowserRouter([
     ]
   },
   {
-        path: '/product-details-new/:id',
+        path: '/product-landingPage/:id',
         element: <ProductDetailsNew></ProductDetailsNew>
       },
 
