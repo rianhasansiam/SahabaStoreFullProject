@@ -75,7 +75,7 @@ const OrderConfirmation = () => {
       <div className="min-h-screen flex items-center justify-center text-lg text-red-600">Failed to load order details.</div>
     );
   }
-
+console.log(orderProducts)
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
@@ -140,7 +140,7 @@ const OrderConfirmation = () => {
                       <div className="flex-1">
                         <h4 className="font-medium text-gray-900">{product.name || 'Product'}</h4>
                         <p className="text-sm text-gray-500">Product ID: {product.productId || '--'}</p>
-                        <p className='border rounded-full border-[#22874b] w-20 text-center my-2 bg-green-100'>{product.variant || product.size || '250ml'}</p>
+                        <p className='border rounded-full border-[#22874b] w-20 text-center my-2 bg-green-100'>{product.variant || product.size || 'll'}</p>
                         <div className="flex justify-between mt-1">
                           <p className="text-sm">৳{(product.price || 0).toFixed(2)} × {product.quantity || 1}</p>
                           <p className="font-medium">৳{((product.price || 0) * (product.quantity || 1)).toFixed(2)}</p>
